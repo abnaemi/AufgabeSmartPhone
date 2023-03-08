@@ -1,13 +1,14 @@
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Smartphone implements GPS, Radio  {
 
 
     private String nameOfModel;
     private String nameOfCompany;
-    private ArrayList<Friend> listOfAllContact = new ArrayList<Friend>();
+    private ArrayList<Friend> listOfAllContact = new ArrayList<>();
 
     public Smartphone (){
 
@@ -23,7 +24,7 @@ public class Smartphone implements GPS, Radio  {
     public void getContact(int index) throws IOException {
         System.out.println("Contact at index " + index + ":");
        try {
-           Contact contact = listOfAllContact.get(index);
+           Friend contact = listOfAllContact.get(index);
            System.out.println("Name: " + contact.getName());
            System.out.println("Number: " + contact.getTelefonNummer());
        } catch (Exception e) {
@@ -77,6 +78,26 @@ public class Smartphone implements GPS, Radio  {
 
     public void setListOfAllContact(ArrayList<Friend> listOfAllContact) {
         this.listOfAllContact = listOfAllContact;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Smartphone that)) return false;
+
+        if (getNameOfModel() != null ? !getNameOfModel().equals(that.getNameOfModel()) : that.getNameOfModel() != null)
+            return false;
+        if (getNameOfCompany() != null ? !getNameOfCompany().equals(that.getNameOfCompany()) : that.getNameOfCompany() != null)
+            return false;
+        return Objects.equals(listOfAllContact, that.listOfAllContact);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getNameOfModel() != null ? getNameOfModel().hashCode() : 0;
+        result = 31 * result + (getNameOfCompany() != null ? getNameOfCompany().hashCode() : 0);
+        result = 31 * result + (listOfAllContact != null ? listOfAllContact.hashCode() : 0);
+        return result;
     }
 
     @Override

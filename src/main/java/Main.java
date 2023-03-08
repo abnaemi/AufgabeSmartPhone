@@ -16,8 +16,13 @@ public class Main {
 
         smartphone.addContact(contactone);
         smartphone.addContact(contacttwo);
-        smartphone.getListOfAllContact();
+
 
         smartphone.getContact(1);
+
+         ArrayList<Friend> listOfAllContact = new ArrayList<Friend>();
+        listOfAllContact.add(contactone);
+        listOfAllContact.add(contacttwo);
+        System.out.println(listOfAllContact.get(1));
     }
 }
