@@ -8,17 +8,19 @@ public class Smartphone implements GPS, Radio  {
     private ArrayList<String> listOfAllContact;
 
     @Override
-    public int getPosition() {
-        return 0;
+    public void getPosition() {
+        System.out.println("Köln");
     }
 
     @Override
     public boolean startRadio() {
-        return false;
+        System.out.println("Radio started");
+                return true;
     }
 
     @Override
     public boolean stopRadio() {
+        System.out.println("Radio stopped");
         return false;
     }
 }

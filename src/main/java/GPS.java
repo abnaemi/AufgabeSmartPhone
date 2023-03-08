@@ -1,4 +1,4 @@
 public interface GPS  {
-    public int getPosition ();
+    public void getPosition ();
 
 }
