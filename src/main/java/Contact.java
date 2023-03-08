@@ -1,6 +1,10 @@
 public abstract class  Contact {
     private String name;
+    private int telefonNummer;
 
+    public int getTelefonNummer() {
+        return telefonNummer;
+    }
 
     public Contact(){
 
@@ -16,6 +20,7 @@ public abstract class  Contact {
     public String getName(){
         return name;
     }
+
 
 
 }

@@ -19,8 +19,12 @@ public class Smartphone implements GPS, Radio  {
     public void addContact (Friend contact){
         listOfAllContact.add(contact);
     }
-    public Contact getContact(int index){
-        return listOfAllContact.get(index);
+    public void getContact(int index){
+        System.out.println("Contact at index " + index + ":");
+        Contact contact = listOfAllContact.get(index);
+        System.out.println("Name: " + contact.getName());
+        System.out.println("Number: " + contact.getTelefonNummer());
+
     }
 
 

@@ -17,6 +17,6 @@ public class Main {
         smartphone.addContact(contacttwo);
         smartphone.getListOfAllContact();
 
-        System.out.println(smartphone.getContact(1));
+        smartphone.getContact(1);
     }
 }
