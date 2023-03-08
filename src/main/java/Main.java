@@ -18,6 +18,6 @@ public class Main {
         smartphone.addContact(contacttwo);
         smartphone.getListOfAllContact();
 
-        smartphone.getContact(144);
+        smartphone.getContact(1);
     }
 }
