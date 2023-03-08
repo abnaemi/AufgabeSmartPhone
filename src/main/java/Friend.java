@@ -13,6 +13,10 @@ public class Friend extends Contact{
         this.telefonNummer = telefonNummer;
     }
 
+    public int getTelefonNummer() {
+        return telefonNummer;
+    }
+
     @Override
     public String toString() {
         return "Friend{" +
