@@ -10,12 +10,12 @@ public class Main {
         Friend contactone = new Friend("Tom", 111);
         Friend contacttwo= new Friend("Sara", 222);
 
-        System.out.println(contactone.getName());
-        System.out.println(contactone.getTelefonNummer());
+        //System.out.println(contactone.getName());
+        //System.out.println(contactone.getTelefonNummer());
 
         smartphone.addContact(contactone);
         smartphone.addContact(contacttwo);
-        System.out.println(smartphone.getListOfAllContact());
+        smartphone.getListOfAllContact();
 
 
     }

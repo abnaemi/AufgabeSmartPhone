@@ -57,8 +57,12 @@ public class Smartphone implements GPS, Radio  {
         this.nameOfCompany = nameOfCompany;
     }
 
-    public ArrayList<Friend> getListOfAllContact() {
-        return listOfAllContact;
+    public void getListOfAllContact() {
+          for (Friend friend : listOfAllContact) {
+              System.out.println(friend.getName());
+              System.out.println(friend.getTelefonNummer());
+          }
+
     }
 
     public void setListOfAllContact(ArrayList<Friend> listOfAllContact) {
