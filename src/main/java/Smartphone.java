@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Smartphone implements GPS, Radio  {
@@ -6,6 +7,14 @@ public class Smartphone implements GPS, Radio  {
     private String nameOfModel;
     private String nameOfCompany;
     private ArrayList<String> listOfAllContact;
+
+    public Smartphone (){
+
+    }
+
+    public Smartphone (String nameOfModel, String nameOfCompany, ArrayList listOfAllContact){
+
+    }
 
     @Override
     public void getPosition() {
@@ -22,5 +31,38 @@ public class Smartphone implements GPS, Radio  {
     public boolean stopRadio() {
         System.out.println("Radio stopped");
         return false;
+    }
+
+    public String getNameOfModel() {
+        return nameOfModel;
+    }
+
+    public void setNameOfModel(String nameOfModel) {
+        this.nameOfModel = nameOfModel;
+    }
+
+    public String getNameOfCompany() {
+        return nameOfCompany;
+    }
+
+    public void setNameOfCompany(String nameOfCompany) {
+        this.nameOfCompany = nameOfCompany;
+    }
+
+    public ArrayList<String> getListOfAllContact() {
+        return listOfAllContact;
+    }
+
+    public void setListOfAllContact(ArrayList<String> listOfAllContact) {
+        this.listOfAllContact = listOfAllContact;
+    }
+
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "nameOfModel='" + nameOfModel + '\'' +
+                ", nameOfCompany='" + nameOfCompany + '\'' +
+                ", listOfAllContact=" + listOfAllContact +
+                '}';
     }
 }
