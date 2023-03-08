@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -19,11 +20,16 @@ public class Smartphone implements GPS, Radio  {
     public void addContact (Friend contact){
         listOfAllContact.add(contact);
     }
-    public void getContact(int index){
+    public void getContact(int index) throws IOException {
         System.out.println("Contact at index " + index + ":");
-        Contact contact = listOfAllContact.get(index);
-        System.out.println("Name: " + contact.getName());
-        System.out.println("Number: " + contact.getTelefonNummer());
+       try {
+           Contact contact = listOfAllContact.get(index);
+           System.out.println("Name: " + contact.getName());
+           System.out.println("Number: " + contact.getTelefonNummer());
+       } catch (Exception e) {
+           System.out.println("Contact doenst exist");
+
+       }
 
     }
 
