@@ -6,7 +6,7 @@ public class Smartphone implements GPS, Radio  {
 
     private String nameOfModel;
     private String nameOfCompany;
-    private ArrayList<Contact> listOfAllContact;
+    private ArrayList<Friend> listOfAllContact = new ArrayList<Friend>();
 
     public Smartphone (){
 
@@ -16,8 +16,8 @@ public class Smartphone implements GPS, Radio  {
 
     }
 
-    public void addContact (Contact contact){
-       listOfAllContact.add(contact);
+    public void addContact (Friend contact){
+        listOfAllContact.add(contact);
     }
     public Contact getContact(int index){
         return listOfAllContact.get(index);
@@ -57,11 +57,11 @@ public class Smartphone implements GPS, Radio  {
         this.nameOfCompany = nameOfCompany;
     }
 
-    public ArrayList<Contact> getListOfAllContact() {
+    public ArrayList<Friend> getListOfAllContact() {
         return listOfAllContact;
     }
 
-    public void setListOfAllContact(ArrayList<Contact> listOfAllContact) {
+    public void setListOfAllContact(ArrayList<Friend> listOfAllContact) {
         this.listOfAllContact = listOfAllContact;
     }
 
