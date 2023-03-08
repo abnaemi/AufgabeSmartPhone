@@ -19,6 +19,9 @@ public class Smartphone implements GPS, Radio  {
     public void addContact (Contact contact){
        listOfAllContact.add(contact);
     }
+    public Contact getContact(int index){
+        return listOfAllContact.get(index);
+    }
 
 
     @Override
