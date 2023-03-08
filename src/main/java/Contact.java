@@ -9,8 +9,10 @@ public abstract class  Contact {
         this.name = name;
     }
 
+
     public String getName(){
         return name;
     }
+
 
 }

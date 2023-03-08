@@ -6,7 +6,7 @@ public class Smartphone implements GPS, Radio  {
 
     private String nameOfModel;
     private String nameOfCompany;
-    private ArrayList<String> listOfAllContact;
+    private ArrayList<Contact> listOfAllContact;
 
     public Smartphone (){
 
@@ -15,6 +15,11 @@ public class Smartphone implements GPS, Radio  {
     public Smartphone (String nameOfModel, String nameOfCompany, ArrayList listOfAllContact){
 
     }
+
+    public void addContact (Contact contact){
+       listOfAllContact.add(contact);
+    }
+
 
     @Override
     public void getPosition() {
@@ -49,11 +54,11 @@ public class Smartphone implements GPS, Radio  {
         this.nameOfCompany = nameOfCompany;
     }
 
-    public ArrayList<String> getListOfAllContact() {
+    public ArrayList<Contact> getListOfAllContact() {
         return listOfAllContact;
     }
 
-    public void setListOfAllContact(ArrayList<String> listOfAllContact) {
+    public void setListOfAllContact(ArrayList<Contact> listOfAllContact) {
         this.listOfAllContact = listOfAllContact;
     }
 
